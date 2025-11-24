@@ -5,13 +5,13 @@
 **Client:** Tanshiba Naorin Prapti  
 **Project Type:** Static Personal Portfolio Website  
 **Completion Date:** November 24, 2025  
-**Status:** Ready for Deployment
+**Status:** Fully Updated & Ready for Deployment
 
 ---
 
 ## Project Overview
 
-A fully functional, modern, and responsive portfolio website showcasing professional experience, skills, projects, and achievements.
+A fully functional, modern, and responsive portfolio website showcasing professional experience, skills, projects, and achievements. Recently updated with comprehensive new information, enhanced design elements, and modern background animations.
 
 ### Key Features Implemented
 
@@ -25,25 +25,81 @@ A fully functional, modern, and responsive portfolio website showcasing professi
 ✅ SEO-optimized structure  
 ✅ Fast loading performance  
 ✅ Cross-browser compatible  
+✅ Animated background effects with gradient shifts  
+✅ Enhanced color schemes and gradients  
+✅ Story-driven about section  
+✅ Key strengths showcase  
 
 ---
 
 ## Sections Included
 
-1. **Hero Section** - Name, title, location, email, CTA buttons
-2. **About Me** - Professional narrative and background
-3. **Experience** - 5 positions with detailed responsibilities
-   - BTA Global (Creative & Digital Communications Executive)
+1. **Hero Section** - Updated with personal greeting and professional tagline
+   - "Hi, Naorin here."
+   - Software Engineer tagline with creative focus
+   - Contact information and CTAs
+   
+2. **About Me** - Comprehensive professional story
+   - Journey from entrepreneur to software engineer
+   - Detailed narrative covering all experiences
+   - Internship experience highlighted
+   
+3. **Key Strengths** - New visual section showcasing:
+   - Creative Problem-Solving
+   - Research-Driven Approach
+   - Practical & Fast-Learner
+   - Leadership & Team Coordination
+   
+4. **Experience** - 6 positions with detailed responsibilities
+   - Internship - AI Chatbot Development (UTM, Mar-Jul 2025)
+   - BTA Global X (Creative & Digital Communications Executive)
    - Elite Global Excellence (Multimedia & Publicity)
    - JDT Football Stadium (Customer Service Cashier)
    - Worldwide International Event (Protocol & Hospitality)
-   - Asia-Pacific Climate Week (Event Coordinator)
-4. **Skills** - 6 categories with badges and progress bars
-5. **Projects** - Filterable project showcase (6 projects)
-6. **Education** - Degrees and certifications
-7. **Extra-Curricular** - 3 volunteer activities
-8. **Languages** - 4 languages with proficiency levels
-9. **Contact** - Contact information and social links
+   - Asia-Pacific Climate Week (Event Support)
+   
+5. **Skills** - 8 comprehensive categories
+   - Digital Marketing
+   - Content Creation
+   - Creative Design
+   - Web Development (with Node.js)
+   - AI & Database (ML models, AI Chatbot, MongoDB, MySQL)
+   - Design & Dev Tools (Figma, Jira, Clockify, Visual Studio)
+   - Event Leadership (EMCEE, Program Director)
+   - Leadership & Management (Strategic Planning)
+   
+6. **Projects** - Filterable project showcase (6 projects)
+   
+7. **Education** - Updated education section
+   - Bachelor of Computer Science (Major in Software Engineering) - Graduated
+   - Foundation in Science (2020)
+   - Professional Certifications
+   
+8. **Extra-Curricular** - 3 volunteer activities
+   - UNESCO Club Multimedia Team
+   - COMFAIR 2023 Multimedia Crew
+   - Student Registration Assistant (ISOP 2023) - New addition
+   
+9. **Languages** - 4 languages with updated proficiency
+   - English (Fluent)
+   - Bengali (Fluent)
+   - Urdu (Intermediate)
+   - Hindi (Intermediate)
+   
+10. **Hobbies & Interests** - New section
+    - Painting
+    - Travelling
+    
+11. **Certificates & Achievements** - New placeholder section
+    
+12. **My Gallery** - New placeholder section
+    
+13. **Testimonials** - New placeholder section
+    
+14. **Contact** - Updated with actual links
+    - LinkedIn: https://www.linkedin.com/in/tanshiba-naorin-ba6b21236/
+    - GitHub: https://github.com/Tanshiba12
+    - Email contact
 
 ---
 
@@ -51,18 +107,28 @@ A fully functional, modern, and responsive portfolio website showcasing professi
 
 ### Technologies Used
 - HTML5 (Semantic markup)
-- CSS3 (Custom properties, flexbox, grid)
+- CSS3 (Custom properties, flexbox, grid, animations)
 - JavaScript (Vanilla ES6+)
 - Bootstrap 5.3.2 (UI framework)
 - Bootstrap Icons 1.11.1 (Icon library)
 
 ### Code Quality
 - Clean, well-commented code
-- No multiline comments (as requested)
+- Simple commenting style (/// comment ///)
 - Modular CSS with CSS variables
 - Semantic HTML structure
 - Accessible markup (ARIA labels)
 - Cross-browser compatible
+
+### Design Enhancements
+- Animated background with gradient shifts
+- Floating elements in hero section
+- Enhanced hover effects on cards
+- Modern gradient color schemes
+- Smooth fade-in animations
+- Interactive strength cards
+- Colorful hobby section
+- Professional placeholder sections
 
 ### Performance
 - Optimized asset loading
@@ -70,6 +136,7 @@ A fully functional, modern, and responsive portfolio website showcasing professi
 - Efficient CSS animations
 - Lazy loading implemented
 - Fast initial page load
+- Smooth scroll behavior
 
 ---
 

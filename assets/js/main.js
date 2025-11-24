@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    const animateElements = document.querySelectorAll('.skill-category, .project-card, .experience-card, .education-card, .activity-card, .skill-bar-item, .language-item');
+    const animateElements = document.querySelectorAll('.skill-category, .project-card, .experience-card, .education-card, .activity-card, .skill-bar-item, .language-item, .strength-card, .hobby-card');
     animateElements.forEach(element => observer.observe(element));
 
     const timelineItems = document.querySelectorAll('.timeline-item');
