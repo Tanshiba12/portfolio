@@ -1,0 +1,41 @@
+{
+  "name": "tanshiba-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Tanshiba Naorin Prapti - Creative Digital Solutions Executive",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=index.html",
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "lint": "npx eslint assets/js/*.js",
+    "format": "npx prettier --write \"**/*.{html,css,js,json,md}\""
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "static-site",
+    "bootstrap",
+    "responsive",
+    "creative",
+    "digital-marketing"
+  ],
+  "author": "Tanshiba Naorin Prapti <tanshibanaorin@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/portfolio/issues"
+  },
+  "homepage": "https://github.com/yourusername/portfolio#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
