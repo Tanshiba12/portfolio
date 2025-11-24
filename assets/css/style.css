@@ -1273,6 +1273,7 @@ section:nth-child(even)::before {
     cursor: pointer;
     transition: var(--transition);
     box-shadow: var(--shadow);
+    display: block;
 }
 
 .gallery-item:hover {
@@ -1284,9 +1285,11 @@ section:nth-child(even)::before {
 .gallery-item img,
 .gallery-video-element {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 12px;
     transition: transform 0.5s ease;
+    vertical-align: middle;
 }
 
 .gallery-item:hover img,
