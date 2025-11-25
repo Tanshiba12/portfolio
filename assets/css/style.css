@@ -25,11 +25,12 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Aptos', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    font-size: 14px;
 }
 
 /* /// Animated Background Effects /// */
@@ -261,7 +262,7 @@ body::before {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 22px;
     font-weight: 700;
     color: var(--text-dark);
     position: relative;
@@ -269,7 +270,7 @@ body::before {
 }
 
 .section-title::first-letter {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 800;
     color: var(--primary-color);
     line-height: 1;
@@ -288,9 +289,18 @@ body::before {
 }
 
 .about-content p {
-    font-size: 1.1rem;
+    font-size: 14px;
     color: var(--text-light);
     margin-bottom: 1.5rem;
+}
+
+.about-content p strong,
+.about-content p .emphasis,
+p strong,
+p .emphasis {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
 .timeline {
@@ -803,6 +813,35 @@ body::before {
     transform: translateY(-3px);
 }
 
+/* Contact Buttons Row */
+.contact-buttons-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-contact {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    border-width: 2px;
+}
+
+.btn-contact i {
+    font-size: 1.2rem;
+}
+
+.btn-contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .footer {
     background-color: var(--text-dark);
 }
@@ -1254,6 +1293,46 @@ section:nth-child(even)::before {
 
 .project-gallery-item:hover img {
     transform: scale(1.1);
+}
+
+/* ========================================
+   GALLERY FILTERS
+======================================== */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+    border-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.gallery-item.hidden {
+    display: none;
 }
 
 /* ========================================

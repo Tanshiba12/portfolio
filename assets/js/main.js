@@ -585,4 +585,35 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'ArrowRight') enhancedShowNext();
         if (e.key === 'ArrowLeft') enhancedShowPrev();
     });
+
+    // === Gallery Filter Functionality ===
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            // Filter gallery items
+            galleryItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (filterValue === 'all') {
+                    item.classList.remove('hidden');
+                    item.style.display = 'block';
+                } else if (itemCategory === filterValue) {
+                    item.classList.remove('hidden');
+                    item.style.display = 'block';
+                } else {
+                    item.classList.add('hidden');
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
 });
