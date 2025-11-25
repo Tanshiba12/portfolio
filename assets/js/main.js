@@ -402,68 +402,165 @@ document.addEventListener('DOMContentLoaded', function() {
             'assets/img/iqa_chatbot/2.1 visitor dashboard showing the chatbot UI.png',
             'assets/img/iqa_chatbot/3 Asking questions to the chatbot.png',
             'assets/img/iqa_chatbot/4 Asking more questions to the chatbot.png',
+            'assets/img/iqa_chatbot/5 asking more and more questions.png',
+            'assets/img/iqa_chatbot/5.1 backend logs showing how the messages are processed as it can be seen there are 3.png',
+            'assets/img/iqa_chatbot/6 asking more more more more more moreee questions.png',
+            'assets/img/iqa_chatbot/7 asking more more more more more moreeemore more more moree more more more moreee questions.png',
+            'assets/img/iqa_chatbot/8 login page showing logging in SystemAdmin.png',
             'assets/img/iqa_chatbot/9 Dashboard of System admin initially showing total users active usrs and uploaded documents.png',
             'assets/img/iqa_chatbot/10 Document manager loading the documents.png',
+            'assets/img/iqa_chatbot/11 Document manager showing the ddocuments that were alread uploaded.png',
             'assets/img/iqa_chatbot/12 Uploading a random document or pdf.png',
+            'assets/img/iqa_chatbot/13 document choosedn now adding a name or title.png',
+            'assets/img/iqa_chatbot/14 Clicking the upload button to upload the pdf.png',
+            'assets/img/iqa_chatbot/15 confirm upload message pops up.png',
+            'assets/img/iqa_chatbot/16 clicking on yes in the confirm upload mesasge.png',
+            'assets/img/iqa_chatbot/17 backend showing the logs of the document getting uploaded to gdrive as well as in the mongodb.png',
+            'assets/img/iqa_chatbot/18 can check the ui and the 4th document is uploaded.png',
             'assets/img/iqa_chatbot/19 Activity monitor loading users.png',
+            'assets/img/iqa_chatbot/20 Activity monitor succesfully loaded all the users.png',
+            'assets/img/iqa_chatbot/21 activity monitor showing the uoloaded documetns below as well.png',
             'assets/img/iqa_chatbot/22 System Admin settings page.png',
+            'assets/img/iqa_chatbot/23 loggin in admin as just to check if the uploaded documents properly show along various user roles properly.png',
             'assets/img/iqa_chatbot/24 the dashboard automatriclly updated after the 4th document was succefuly uploaded to the db.png'
         ],
         'bta': [
-            'assets/img/BTA/WhatsApp Image 2025-11-24 at 2.42.09 PM.jpeg',
-            'assets/img/BTA/WhatsApp Image 2025-11-24 at 2.42.09 PM (2).jpeg',
-            'assets/img/BTA/WhatsApp Image 2025-11-24 at 2.42.09 PM (3).jpeg',
-            'assets/img/BTA/WhatsApp Image 2025-11-24 at 2.42.10 PM.jpeg',
-            'assets/img/BTA/WhatsApp Image 2025-11-24 at 2.42.10 PM (1).jpeg',
-            'assets/img/BTA/WhatsApp Image 2025-11-24 at 2.42.11 PM.jpeg',
-            'assets/img/BTA/WhatsApp Image 2025-11-24 at 2.42.12 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.14 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.15 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.16 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.17 PM (1).jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.18 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.19 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.19 PM (2).jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.20 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.21 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.22 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.23 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.24 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.24 PM (1).jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.25 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.26 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.27 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.28 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.29 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.30 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.31 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.32 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.33 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.34 PM.jpeg',
-            'assets/img/bta_events/WhatsApp Image 2025-11-24 at 2.39.35 PM.jpeg'
+            'assets/img/BTA_posts/bta_globalx_posts (1).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (2).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (3).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (4).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (5).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (6).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (7).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (8).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (9).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (10).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (11).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (12).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (13).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (14).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (15).jpeg',
+            'assets/img/BTA_posts/bta_globalx_posts (16).jpeg',
+            'assets/img/BTA_posts/bta_event_images (1).jpeg',
+            'assets/img/BTA_posts/bta_event_images (2).jpeg',
+            'assets/img/BTA_posts/bta_event_images (3).jpeg',
+            'assets/img/BTA_posts/ege_multimedia_publicity.jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (1).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (2).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (3).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (4).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (5).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (6).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (7).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (8).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (9).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (10).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (11).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (12).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (13).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (14).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (15).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (22).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (28).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (35).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (36).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (37).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (38).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (39).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (40).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (41).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (42).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (43).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (44).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (45).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (46).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (47).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (48).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (49).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (50).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (51).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (52).jpeg',
+            'assets/img/bta_events/bta_awards_ceremonies_events_publicity (53).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (1).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (2).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (3).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (4).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (5).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (6).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (7).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (8).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (9).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (10).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (11).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (12).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (13).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (14).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (15).jpeg',
+            'assets/img/bta_events/bta_beauty_lounge_promotion (16).jpeg'
         ],
         'ege': [
-            'assets/img/EGE/WhatsApp Image 2025-11-24 at 2.39.36 PM.jpeg',
-            'assets/img/EGE/WhatsApp Image 2025-11-24 at 2.39.36 PM (1).jpeg',
-            'assets/img/EGE/WhatsApp Image 2025-11-24 at 2.39.36 PM (2).jpeg'
+            'assets/img/EGE/ege_big_data_visualization_challenges_tools.jpeg',
+            'assets/img/EGE/ege_embracing_softskills_better_living.jpeg',
+            'assets/img/EGE/ege_global_marketing_insights.jpeg',
+            'assets/img/EGE/ege_iot_blockchain_technology_theory_pratical_applications.jpeg'
         ],
         'jdt': [
             'assets/img/jdt/jdt_kad.jpg'
         ],
         'apcw': [
-            'assets/img/persada/Persada_johor_kad.jpg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.45 PM.jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.46 PM.jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.46 PM (1).jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.46 PM (2).jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.47 PM.jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.47 PM (1).jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.47 PM (2).jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.48 PM.jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.48 PM (1).jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.48 PM (2).jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.48 PM (3).jpeg',
-            'assets/img/persada/WhatsApp Image 2025-11-24 at 2.38.49 PM.jpeg'
+            'assets/img/persada/apcw event pass.jpeg',
+            'assets/img/persada/apcw_event_images.jpeg',
+            'assets/img/persada/apcw_event_images (1).jpeg',
+            'assets/img/persada/apcw_event_images (2).jpeg',
+            'assets/img/persada/apcw_event_images (3).jpeg',
+            'assets/img/persada/apcw_event_images (4).jpeg',
+            'assets/img/persada/apcw_event_images (5).jpeg',
+            'assets/img/persada/apcw_event_images (6).jpeg',
+            'assets/img/persada/apcw_event_images (7).jpeg',
+            'assets/img/persada/apcw_event_images (8).jpeg',
+            'assets/img/persada/apcw_event_images (9).jpeg',
+            'assets/img/persada/apcw_event_images (10).jpeg'
+        ],
+        'embrois': [
+            'assets/img/embrois/Embrois_cover_photo.jpeg',
+            'assets/img/embrois/Embrois_Posts.jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (2).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (3).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (4).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (5).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (6).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (7).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (8).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (9).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (10).jpeg',
+            'assets/img/embrois/Embrois_Product_promotion (11).jpeg',
+            'assets/img/embrois/Aveeno.jpeg',
+            'assets/img/embrois/cetaphil.jpeg',
+            'assets/img/embrois/Cosmoderm_vitaminE.jpeg',
+            'assets/img/embrois/CosrX_Acne_Pimple_Master_Patch.jpeg',
+            'assets/img/embrois/Cosrx_aha_bha.jpeg',
+            'assets/img/embrois/cosrX_nail_mucin.jpeg',
+            'assets/img/embrois/cosrX_salicylic_acid.jpeg'
+        ],
+        'painting': [
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.08 PM.jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.09 PM.jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.09 PM (1).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.09 PM (2).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.10 PM.jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.10 PM (1).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.10 PM (2).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.10 PM (3).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.11 PM.jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.11 PM (1).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.11 PM (2).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.12 PM.jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.12 PM (1).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.12 PM (2).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.13 PM.jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.13 PM (1).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.13 PM (2).jpeg',
+            'assets/img/sketches/WhatsApp Image 2025-11-24 at 2.39.13 PM (3).jpeg'
         ]
     };
 
@@ -516,6 +613,45 @@ document.addEventListener('DOMContentLoaded', function() {
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
+        });
+    });
+
+    /// Hobby Gallery Click Handler ///
+    const hobbyGalleryItems = document.querySelectorAll('.hobby-gallery-item');
+    
+    hobbyGalleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const hobbyType = this.getAttribute('data-hobby');
+            const images = experienceImageMap[hobbyType];
+            
+            if (!images) return;
+            
+            // For images, open the first image
+            const imgSrc = item.querySelector('img')?.src || images[0];
+            lightboxImg.src = imgSrc;
+            lightboxImg.style.display = 'block';
+            lightboxVideo.style.display = 'none';
+            
+            // Create gallery array for this hobby
+            window.currentExperienceGallery = images;
+            
+            // Find the correct index
+            let foundIndex = -1;
+            const clickedSrc = imgSrc.split('/').pop(); // Get filename only
+            
+            for (let i = 0; i < images.length; i++) {
+                const galleryImgName = images[i].split('/').pop();
+                if (clickedSrc === galleryImgName) {
+                    foundIndex = i;
+                    break;
+                }
+            }
+            
+            window.currentGalleryIndex = foundIndex !== -1 ? foundIndex : 0;
+            
+            lightboxCaption.textContent = `Image ${window.currentGalleryIndex + 1} of ${images.length}`;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
     });
 
@@ -588,7 +724,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // === Gallery Filter Functionality ===
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const allGalleryItems = document.querySelectorAll('.gallery-item');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -600,7 +736,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const filterValue = button.getAttribute('data-filter');
 
             // Filter gallery items
-            galleryItems.forEach(item => {
+            allGalleryItems.forEach(item => {
                 const itemCategory = item.getAttribute('data-category');
                 
                 if (filterValue === 'all') {

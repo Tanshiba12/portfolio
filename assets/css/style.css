@@ -132,9 +132,9 @@ body::before {
 }
 
 .greeting-text {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 400;
     opacity: 0;
     animation: fadeInUp 0.8s ease forwards;
 }
@@ -143,6 +143,7 @@ body::before {
     color: var(--text-light);
     font-weight: 400;
     line-height: 1.6;
+    font-size: 14px;
     opacity: 0;
     animation: fadeInUp 1s ease 0.3s forwards;
 }
@@ -158,13 +159,15 @@ body::before {
     }
 }
 
-.hero-content h1 {
+.hero-content p {
     color: var(--text-dark);
-    margin-bottom: 1rem;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.hero-content h2 {
-    color: var(--primary-color);
+.hero-content p strong {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .hero-content .lead {
@@ -255,6 +258,21 @@ body::before {
 .profile-placeholder i {
     font-size: 150px;
     color: var(--white);
+}
+
+.profile-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid var(--white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .section-padding {
@@ -842,6 +860,42 @@ p .emphasis {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* LinkedIn Button */
+.btn-contact.btn-outline-primary .bi-linkedin {
+    color: #0077B5;
+}
+
+.btn-contact.btn-outline-primary:hover .bi-linkedin {
+    color: white;
+}
+
+/* GitHub Button */
+.btn-contact.btn-outline-primary .bi-github {
+    color: #333;
+}
+
+.btn-contact.btn-outline-primary:hover .bi-github {
+    color: white;
+}
+
+/* Email Button */
+.btn-contact.btn-outline-primary .bi-envelope-fill {
+    color: #EA4335;
+}
+
+.btn-contact.btn-outline-primary:hover .bi-envelope-fill {
+    color: white;
+}
+
+/* WhatsApp Button */
+.btn-contact.btn-outline-success .bi-whatsapp {
+    color: #25D366;
+}
+
+.btn-contact.btn-outline-success:hover .bi-whatsapp {
+    color: white;
+}
+
 .footer {
     background-color: var(--text-dark);
 }
@@ -1064,6 +1118,53 @@ p .emphasis {
     z-index: 1;
 }
 
+/* Hobby Gallery */
+.hobby-gallery {
+    position: relative;
+    z-index: 1;
+}
+
+.hobby-gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.hobby-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hobby-gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+}
+
+.hobby-gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.hobby-gallery-more .gallery-more-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 102, 241, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 /* /// Certificate, Gallery, Testimonial Placeholders /// */
 .certificate-placeholder,
 .gallery-placeholder,
@@ -1172,6 +1273,12 @@ section:nth-child(even)::before {
 
     .profile-placeholder i {
         font-size: 100px;
+    }
+    
+    .profile-img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 2rem;
     }
 
     .hero-buttons .btn {
