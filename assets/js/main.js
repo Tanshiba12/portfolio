@@ -6,6 +6,44 @@ document.addEventListener('DOMContentLoaded', function() {
         yearElement.textContent = currentYear;
     }
 
+    // === Theme Switcher (Dark & Light Mode) ===
+    const themeToggleBtn = document.getElementById('themeToggle');
+    
+    function getCurrentTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) return savedTheme;
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+        if (metaColorScheme) {
+            metaColorScheme.content = theme === 'dark' ? 'dark' : 'light';
+        }
+    }
+
+    // Apply active theme immediately on DOM load
+    applyTheme(getCurrentTheme());
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+            const current = document.documentElement.getAttribute('data-theme') || getCurrentTheme();
+            const next = current === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+            localStorage.setItem('theme', next);
+        });
+    }
+
+    // Listen for OS system theme changes
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    }
+
     const navbar = document.querySelector('.navbar');
     const scrollToTopBtn = document.getElementById('scrollToTop');
 
@@ -50,16 +88,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', updateActiveLink);
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+    // Smooth scroll for all hash links with mobile menu collapse
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
-            
-            if (targetId.startsWith('#')) {
-                e.preventDefault();
+            if (targetId && targetId.length > 1 && targetId.startsWith('#')) {
                 const targetSection = document.querySelector(targetId);
-                
                 if (targetSection) {
-                    const navbarHeight = navbar.offsetHeight;
+                    e.preventDefault();
+                    const navbarHeight = navbar ? navbar.offsetHeight : 70;
                     const targetPosition = targetSection.offsetTop - navbarHeight;
 
                     window.scrollTo({
@@ -68,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
 
                     const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarCollapse.classList.contains('show')) {
-                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
                         bsCollapse.hide();
                     }
                 }
@@ -150,67 +187,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let lastScrollTop = 0;
     window.addEventListener('scroll', function() {
+        if (!navbar) return;
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const isMenuOpen = navbarCollapse && navbarCollapse.classList.contains('show');
         
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
+        if (isMenuOpen || Math.abs(scrollTop - lastScrollTop) < 12) {
+            return;
+        }
+
+        if (scrollTop > lastScrollTop && scrollTop > 120) {
             navbar.style.transform = 'translateY(-100%)';
         } else {
             navbar.style.transform = 'translateY(0)';
         }
         
-        lastScrollTop = scrollTop;
+        lastScrollTop = Math.max(0, scrollTop);
     });
 
-    navbar.style.transition = 'transform 0.3s ease';
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && href.length > 1) {
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    const navbarHeight = navbar.offsetHeight;
-                    const targetPosition = target.offsetTop - navbarHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-
-    const skillBadges = document.querySelectorAll('.skill-badge');
-    skillBadges.forEach(badge => {
-        badge.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.1)';
-        });
-        badge.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
-
-    const socialLinks = document.querySelectorAll('.social-link');
-    socialLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) rotate(360deg)';
-        });
-        link.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) rotate(0deg)';
-        });
-    });
-
-    const cards = document.querySelectorAll('.experience-card, .education-card, .activity-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.borderLeft = '4px solid var(--primary-color)';
-        });
-        card.addEventListener('mouseleave', function() {
-            this.style.borderLeft = 'none';
-        });
-    });
+    if (navbar) {
+        navbar.style.transition = 'transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease';
+    }
 
     console.log('%c Portfolio Website Loaded Successfully! ', 'background: #6366f1; color: white; font-size: 16px; padding: 10px;');
     console.log('%c Created by Tanshiba Naorin Prapti ', 'background: #1e293b; color: white; font-size: 12px; padding: 5px;');
@@ -230,36 +227,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const galleryItemsArray = Array.from(galleryItems);
 
     function openLightbox(index) {
+        if (!lightbox) return;
+
         currentIndex = index;
         const item = galleryItemsArray[currentIndex];
+        if (!item) return;
         const isVideo = item.classList.contains('gallery-video');
 
-        if (isVideo) {
-            const videoSrc = item.querySelector('video source').src;
-            lightboxVideoSource.src = videoSrc;
-            lightboxVideo.load();
-            lightboxVideo.style.display = 'block';
-            lightboxImg.style.display = 'none';
-        } else {
-            const imgSrc = item.querySelector('img').src;
-            lightboxImg.src = imgSrc;
-            lightboxImg.style.display = 'block';
-            lightboxVideo.style.display = 'none';
+        if (isVideo && lightboxVideo && lightboxVideoSource) {
+            const videoSrc = item.querySelector('video source')?.src;
+            if (videoSrc) {
+                lightboxVideoSource.src = videoSrc;
+                lightboxVideo.load();
+                lightboxVideo.style.display = 'block';
+                if (lightboxImg) lightboxImg.style.display = 'none';
+            }
+        } else if (lightboxImg) {
+            const imgSrc = item.querySelector('img')?.src;
+            if (imgSrc) {
+                lightboxImg.src = imgSrc;
+                lightboxImg.style.display = 'block';
+                if (lightboxVideo) lightboxVideo.style.display = 'none';
+            }
         }
 
-        const caption = item.querySelector('.gallery-info h5').textContent + ' - ' + 
-                       item.querySelector('.gallery-info p').textContent;
-        lightboxCaption.textContent = caption;
+        const titleEl = item.querySelector('.gallery-info h5');
+        const descEl = item.querySelector('.gallery-info p');
+        const caption = (titleEl ? titleEl.textContent : '') + (descEl ? ' - ' + descEl.textContent : '');
+        if (lightboxCaption) lightboxCaption.textContent = caption;
 
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox() {
+        if (!lightbox) return;
         lightbox.classList.remove('active');
         document.body.style.overflow = 'auto';
-        lightboxVideo.pause();
-        lightboxVideo.src = '';
+        if (lightboxVideo) {
+            lightboxVideo.pause();
+            lightboxVideo.src = '';
+        }
     }
 
     function showNext() {
@@ -276,15 +284,17 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', () => openLightbox(index));
     });
 
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightboxNext.addEventListener('click', showNext);
-    lightboxPrev.addEventListener('click', showPrev);
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxNext) lightboxNext.addEventListener('click', showNext);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', showPrev);
 
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            closeLightbox();
-        }
-    });
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
 
     // Store original keyboard handler
     const originalKeydownHandler = (e) => {
@@ -338,6 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show/hide vertical nav on scroll
     window.addEventListener('scroll', () => {
+        if (!verticalNav) return;
         if (window.scrollY > 300) {
             verticalNav.classList.add('show');
         } else {
@@ -674,13 +685,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.currentExperienceGallery = null;
         window.currentGalleryIndex = 0;
     };
-
-    // Override navigation functions
     const enhancedShowNext = () => {
         if (window.currentExperienceGallery) {
             window.currentGalleryIndex = (window.currentGalleryIndex + 1) % window.currentExperienceGallery.length;
-            lightboxImg.src = window.currentExperienceGallery[window.currentGalleryIndex];
-            lightboxCaption.textContent = `Image ${window.currentGalleryIndex + 1} of ${window.currentExperienceGallery.length}`;
+            if (lightboxImg) lightboxImg.src = window.currentExperienceGallery[window.currentGalleryIndex];
+            if (lightboxCaption) lightboxCaption.textContent = `Image ${window.currentGalleryIndex + 1} of ${window.currentExperienceGallery.length}`;
         } else {
             originalShowNext();
         }
@@ -689,28 +698,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const enhancedShowPrev = () => {
         if (window.currentExperienceGallery) {
             window.currentGalleryIndex = (window.currentGalleryIndex - 1 + window.currentExperienceGallery.length) % window.currentExperienceGallery.length;
-            lightboxImg.src = window.currentExperienceGallery[window.currentGalleryIndex];
-            lightboxCaption.textContent = `Image ${window.currentGalleryIndex + 1} of ${window.currentExperienceGallery.length}`;
+            if (lightboxImg) lightboxImg.src = window.currentExperienceGallery[window.currentGalleryIndex];
+            if (lightboxCaption) lightboxCaption.textContent = `Image ${window.currentGalleryIndex + 1} of ${window.currentExperienceGallery.length}`;
         } else {
             originalShowPrev();
         }
     };
 
     // Update lightbox controls with enhanced functions
-    lightboxNext.removeEventListener('click', showNext);
-    lightboxPrev.removeEventListener('click', showPrev);
-    lightboxClose.removeEventListener('click', closeLightbox);
-    
-    lightboxNext.addEventListener('click', enhancedShowNext);
-    lightboxPrev.addEventListener('click', enhancedShowPrev);
-    lightboxClose.addEventListener('click', originalCloseLightbox);
+    if (lightboxNext) {
+        lightboxNext.removeEventListener('click', showNext);
+        lightboxNext.addEventListener('click', enhancedShowNext);
+    }
+    if (lightboxPrev) {
+        lightboxPrev.removeEventListener('click', showPrev);
+        lightboxPrev.addEventListener('click', enhancedShowPrev);
+    }
+    if (lightboxClose) {
+        lightboxClose.removeEventListener('click', closeLightbox);
+        lightboxClose.addEventListener('click', originalCloseLightbox);
+    }
     
     // Update click outside handler
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            originalCloseLightbox();
-        }
-    });
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                originalCloseLightbox();
+            }
+        });
+    }
     
     // Update keyboard handler
     document.removeEventListener('keydown', originalKeydownHandler);

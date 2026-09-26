@@ -3,117 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tanshiba Naorin Prapti - Software Engineer from Malaysia. Aligning with creative skills, a dynamic creator crafting simple, smart, and user-focused digital experiences. Portfolio showcasing AI/ML, web development, digital marketing, and event leadership expertise.">
-    <meta name="keywords" content="software engineer, web development, AI chatbot, machine learning, digital marketing, content creation, creative design, portfolio, Malaysia">
+    <meta name="description" content="Tanshiba Naorin Prapti - Creative Digital Solutions Executive based in Kuala Lumpur, Malaysia. Dynamic, creative, and results-driven professional experienced in digital communications, content creation, social media management, creative design, website development, and event leadership.">
+    <meta name="keywords" content="Creative Digital Solutions Executive, digital communications, content creation, creative design, website development, social media management, event director, EMCEE, Kuala Lumpur, Malaysia, Tanshiba Naorin Prapti">
     <meta name="author" content="Tanshiba Naorin Prapti">
-    <title>Tanshiba Naorin Prapti | Software Engineer & Creative Digital Solutions</title>
+    <meta name="color-scheme" content="light dark">
+    <title>Tanshiba Naorin Prapti | Creative Digital Solutions Executive</title>
     
+    <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Inline Theme Script to Prevent FOUC -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <!-- Modern Frosted Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home">TNP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+                <span class="brand-monogram">TNP</span>
+                <span class="brand-name d-none d-sm-inline">Tanshiba Naorin</span>
+            </a>
+            
+            <div class="d-flex align-items-center gap-2 order-lg-last">
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle dark/light theme">
+                    <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                    <i class="bi bi-sun-fill theme-icon-light"></i>
+                </button>
+                <a href="#contact" class="btn btn-sm btn-primary-gradient d-none d-md-inline-flex align-items-center gap-1">
+                    <span>Let's Talk</span>
+                    <i class="bi bi-arrow-right-short"></i>
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#strengths">Strengths</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Upgraded Modern Hero Section -->
     <section id="home" class="hero-section d-flex align-items-center">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <div class="hero-content animate-fade-in">
-                        <p class="greeting-text mb-3">Hi, Naorin here.</p>
-                        <p class="mb-2"><strong>Software Engineer from Malaysia</strong></p>
-                        <p class="tagline-text mb-4">Aligning with creative skills, a dynamic creator crafting simple, smart, and user-focused digital experiences.</p>
-                        <p class="mb-3">
-                            <i class="bi bi-geo-alt-fill text-primary"></i> Johor Bahru, Malaysia
+        <div class="hero-bg-glow"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center min-vh-hero">
+                <div class="col-lg-7 py-5">
+                    <div class="hero-content">
+                        <div class="hero-status-pill mb-3">
+                            <span class="status-indicator-dot"></span>
+                            <span>Available for High-Impact Roles & Projects</span>
+                        </div>
+                        <div class="hero-role-tag mb-2">
+                            <i class="bi bi-stars text-warning me-1"></i> CREATIVE DIGITAL SOLUTIONS EXECUTIVE
+                        </div>
+                        <h1 class="hero-title mb-3">
+                            Crafting Smart, <span class="gradient-text">Human-Centered</span> Digital Experiences.
+                        </h1>
+                        <p class="hero-description mb-4">
+                            Hi, I'm <strong>Tanshiba Naorin Prapti</strong>. A dynamic, versatile executive fusing technical software engineering, digital strategy, multimedia design, and global event leadership to drive engagement and sustainable growth.
                         </p>
-                        <p class="lead mb-4">
-                            <i class="bi bi-envelope-fill text-primary"></i> 
-                            <a href="mailto:t.naorin.p012@gmail.com" class="text-decoration-none">t.naorin.p012@gmail.com</a>
-                        </p>
-                        <p class="lead mb-4">
-                            <i class="bi bi-whatsapp text-success"></i> 
-                            <a href="https://wa.me/601163644131" target="_blank" class="text-decoration-none">WhatsApp Me</a>
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="assets/pdf/CV_Tnp.pdf" class="btn btn-primary btn-lg me-3" download>
+                        
+                        <div class="hero-meta-badges mb-4 d-flex flex-wrap gap-2">
+                            <span class="meta-pill"><i class="bi bi-geo-alt-fill text-primary"></i> Kuala Lumpur, Malaysia</span>
+                            <a href="mailto:t.naorin.p012@gmail.com" class="meta-pill meta-pill-link"><i class="bi bi-envelope-fill text-primary"></i> t.naorin.p012@gmail.com</a>
+                            <a href="https://wa.me/601163644131" target="_blank" class="meta-pill meta-pill-link whatsapp"><i class="bi bi-whatsapp text-success"></i> WhatsApp</a>
+                        </div>
+                        
+                        <div class="hero-buttons d-flex flex-wrap gap-3">
+                            <a href="assets/pdf/CV_Tnp.pdf" class="btn btn-primary-gradient btn-lg" download>
                                 <i class="bi bi-download"></i> Download CV
                             </a>
-                            <a href="#contact" class="btn btn-outline-primary btn-lg">
-                                <i class="bi bi-chat-dots"></i> Contact Me
+                            <a href="#contact" class="btn btn-glass btn-lg">
+                                <i class="bi bi-chat-dots"></i> Get in Touch
+                            </a>
+                            <a href="#experience" class="btn btn-outline-glass btn-lg">
+                                <i class="bi bi-briefcase"></i> View Work
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="hero-image text-center">
-                        <img src="assets/img/profile/graduation.jpg" alt="Tanshiba Naorin Prapti - Graduation Photo" class="profile-img">
+                
+                <div class="col-lg-5 py-4">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-avatar-glow"></div>
+                        <div class="hero-avatar-frame">
+                            <img src="assets/img/profile/graduation.jpg" alt="Tanshiba Naorin Prapti - Creative Digital Solutions Executive" class="hero-profile-img">
+                        </div>
+                        
+                        <!-- Floating Badges for WOW factor -->
+                        <div class="floating-badge badge-top-right">
+                            <div class="floating-badge-icon bg-gradient-purple">
+                                <i class="bi bi-mortarboard-fill"></i>
+                            </div>
+                            <div class="floating-badge-text">
+                                <span class="badge-title">M.Sc. Informatics</span>
+                                <span class="badge-sub">UTM Postgraduate</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom-left">
+                            <div class="floating-badge-icon bg-gradient-amber">
+                                <i class="bi bi-mic-fill"></i>
+                            </div>
+                            <div class="floating-badge-text">
+                                <span class="badge-title">Event Director & EMCEE</span>
+                                <span class="badge-sub">Global • 30+ Countries</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom-right">
+                            <div class="floating-badge-icon bg-gradient-pink">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <div class="floating-badge-text">
+                                <span class="badge-title">AI & Full-Stack</span>
+                                <span class="badge-sub">Smart Digital Systems</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Quick Metrics Strip -->
+            <div class="hero-metrics-strip row g-3 mt-4">
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-num">3+</span>
+                        <span class="metric-label">Years Multifaceted Experience</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-num">30+</span>
+                        <span class="metric-label">Countries Delegate Reach</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-num">100%</span>
+                        <span class="metric-label">Hands-On Leadership & Strategy</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="metric-card">
+                        <span class="metric-num">6</span>
+                        <span class="metric-label">Languages Multilingual Fluency</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section id="about" class="section-padding bg-light">
+    <section id="about" class="section-padding bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">About Me</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 01. PROFESSIONAL PROFILE</span>
+                        <h2 class="section-title">About Me & My Journey</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="about-content">
                         <p class="lead text-center mb-4">
-                            Having a proven track record of delivering innovative digital solutions, I bring a unique blend of creative excellence and strategic thinking to every project.
+                            Dynamic, creative, and results-driven professional with experience in digital communications, content creation, social media management, creative design, and website development.
                         </p>
                         <p>
-                            Alongside an academic background in Computer Science, my expertise spans multiple domains, like digital marketing, content creation, web development, and project management. Throughout 2 years of experience, I have successfully led teams, organized international events, and developed digital strategies for diverse organizations. My passion for creativity, combined with strong technical skills and leadership abilities, allows me to transform ideas into impactful outcomes that resonate with audiences.
+                            Skilled in coordinating teams, managing projects, and leading high-profile events with a strong focus on effective communication and consistent brand delivery. Known for combining technical expertise, creativity, and leadership to drive engagement, streamline operations, and contribute to organizational growth.
                         </p>
                         <p>
-                            I thrive in fast-paced environments, embrace new challenges, and continuously seek opportunities to expand my skill set and contribute to meaningful projects that make a difference.
+                            Alongside an academic background in Computer Science (Bachelor of Computer Science in Software Engineering and Master of Science in Informatics at Universiti Teknologi Malaysia), my expertise spans multiple domains including digital marketing, content strategy, creative design, web development, and operations management. Throughout my career, I have successfully directed international events, built responsive websites, and driven impactful digital outcomes.
                         </p>
                         
                         <div class="story-section mt-5">
                             <h3 class="mb-4">My Story</h3>
                             <p>
-                                With an aim to do something independently besides my studies, I started my first work as an entrepreneur in 2023. Since I was a full-time degree student back then, I couldn't do a full-time job. With a small savings from my pocket money, I established an online-based skincare company in my home country, which I operated from Malaysia. I used to export high-quality skincare products from Korea and sell them through online marketing. Since then, I have developed sales and marketing skills, which enabled me to further explore and work in multiple sales, social media marketing, and event-related jobs.
+                                With an aim to do something independently besides my studies, I started my journey as an entrepreneur in February 2022. Since I was a full-time degree student back then, I founded <strong>Embrois</strong>, an online-based skincare business that I operated through September 2023. I imported authentic skincare products from Korea, planned business strategies, managed sales, and handled creative design, content creation, and social media marketing. This entrepreneurial foundation developed my commercial and digital instincts, enabling me to explore diverse roles across marketing, design, and event leadership.
                             </p>
                             <p>
-                                Being an enthusiastic person, to align my creative design skills, I joined in multimedia team at a Research Center. There I was in charge of digital marketing, designing posters, and handling social media platforms. At the quarter-end of the year 2023, I worked as a student registration volunteer in the International Student Orientation Program (ISOP) at my university. It was a full-week tenure, paid volunteering job. This experience taught me to manage critical situations and helped me develop my teamwork skills.
+                                Being an enthusiastic person, to align my creative design skills, I joined the multimedia and publicity team at a Research Center (Elite Global Excellence). There I was in charge of designing visually engaging posters and multimedia content, handling publicity materials, and assisting in promotional strategies for workshops and seminars. In October 2023, I worked as a student registration volunteer in the International Student Orientation Program (ISOP) at UTM International, managing critical situations and strengthening my teamwork skills.
                             </p>
                             <p>
-                                A few days later, I got an opportunity to work in a protocol crew at a global event, Asia-Pacific Climate Week (APCW) 2023, organized by Persada Johor, held for the first time in Malaysia. In this event, I acted as a communicator, maintained event protocols, and facilitated smooth interactions with the delegates, VIPs, and four foreign Ministers. This event experience built my confidence in leading high-profile events with a strong focus on effective communication and team coordination.
+                                Shortly after, in November 2023, I served as part of the protocol and hospitality crew at a major global event, Asia-Pacific Climate Week (APCW) 2023, organized by Persada Johor and held for the first time in Malaysia. In this event, I acted as a primary communicator, maintained event protocols, and facilitated smooth interactions with foreign delegates, VIPs, and foreign Ministers. This experience built my confidence in leading high-profile events with a strong focus on effective communication and team coordination.
                             </p>
                             <p>
-                                The year 2024 began with another new experience, when I did a part-time job as a customer service cashier in the JDT Football Stadium in Johor Bahru. In this job, I get to learn about managing financial transactions, handling seasonal subscription memberships, and resolving customer queries.
+                                In early 2024 (February – April 2024), I took on a role as a customer service cashier at the JDT Football Stadium in Johor Bahru. In this job, I managed financial transactions accurately, handled seasonal subscription memberships, and resolved customer queries to enhance the fan experience.
                             </p>
                             <p>
-                                As my journey has been all about learning, exploring, and trying new things, in November 2024, I joined BTA Globalx Sdn Bhd with an ambition to combine my technological knowledge and other versatile skills. Since the company focuses on multiple areas like education, collaboration, and events, I started taking responsibilities in design, content creation, communication, social media marketing, and handling different projects. In 2025, one of the biggest highlights of this journey was organizing the company's global event, where I played the role of the event director. It was a full-day Anniversary and the BTA Globalx Excellence Awards event, where delegates from 30+ countries attended the event. I was responsible for leading the entire program from start to finish – managing the flow, coordinating the team, creative designing, marketing, and making sure everything ran smoothly—while also taking on the role of EMCEE, which pushed me to be more confident and present on stage. Separately from events, I was also responsible for creating their corporate websites.
+                                In October 2024, I joined BTA GlobalX TM as Creative & Digital Communications Executive with an ambition to combine my technological knowledge and versatile creative skills. Leading the company's digital and creative strategy, I managed social media, content creation, creative design, administrative operations, cross-functional team coordination, and website development. In 2025, one of the biggest highlights was organizing the company's global event as Program Director and EMCEE—a full-day Anniversary and BTA Globalx Excellence Awards event attended by delegates from over 30 countries. I led the program from start to finish—managing flow, coordinating teams, creative design, marketing, and developing corporate and event websites.
                             </p>
                             <p>
-                                Meanwhile, I completed my internship in my Faculty's Quality and Strategy unit under the supervision of my Academic Advisor. It was a major challenging experience as I worked on something new – developing an AI-powered Chatbot for FC's Internal Quality Assurance (IQA). But as my Final Year Project was based on "Intent Classification of Homestay Booking in Malaysia using Machine Learning models," it gave me a strong foundation in understanding how to collect and process data, train models, and evaluate their performance. This experience became extremely useful during my internship, where I applied the knowledge to build an AI-powered chatbot. I was able to design the system, embed intelligence, and optimize its responses effectively. The connection between my academic project and real-world application not only strengthened my technical skills but also boosted my confidence in developing practical AI solutions. This incredible learning experience allowed me to grow both professionally and personally.
+                                In parallel, I completed my internship in my Faculty's Quality and Strategy unit, developing an AI-powered Chatbot for FC's Internal Quality Assurance (IQA). Drawing upon my Final Year Project ("Intent Classification of Homestay Booking in Malaysia using Machine Learning models"), I applied natural language processing and model training to architect the chatbot system, embed intelligence, and optimize responses effectively. This synergy between academic research and real-world engineering cemented my technical confidence.
                             </p>
                             <p>
-                                Every experience taught me something new, whether it was building confidence, improving my creativity, or learning how to work with people more effectively. Moving through these different domains helped me understand my strengths, push beyond my comfort zone, and grow into someone more adaptable, responsible, and ready for new challenges.
+                                Every experience taught me something new, whether it was building confidence, sharpening my creativity, or orchestrating complex operations. Moving through these diverse domains has shaped me into an adaptable, responsible, and forward-thinking professional ready for high-impact challenges.
                             </p>
                         </div>
                     </div>
@@ -127,7 +243,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Key Strengths</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 02. CORE PILLARS</span>
+                        <h2 class="section-title">Key Strengths & Differentiators</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row g-4">
@@ -171,11 +291,15 @@
         </div>
     </section>
 
-    <section id="experience" class="section-padding bg-light">
+    <section id="experience" class="section-padding bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Professional Experience</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 03. CAREER HIGHLIGHTS</span>
+                        <h2 class="section-title">Professional Experience</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -239,17 +363,17 @@
                                     <div class="d-flex justify-content-between align-items-start mb-3">
                                         <div>
                                             <h4 class="mb-1">Creative & Digital Communications Executive</h4>
-                                            <h5 class="text-primary mb-2">BTA Global X Sdn Bhd.</h5>
+                                            <h5 class="text-primary mb-2">BTA GlobalX ™</h5>
                                         </div>
-                                        <span class="badge bg-primary">Oct 2024 - Present</span>
+                                        <span class="badge bg-primary">Oct 2024 - 2026 (Hybrid)</span>
                                     </div>
                                     <ul class="experience-list">
-                                        <li>Led BTA Globalx's digital and creative strategy, including social media management, content creation, creative design, and website development</li>
+                                        <li>Led BTA Globalx’s digital and creative strategy, including social media management, content creation, creative design, and website development</li>
                                         <li>Managed administrative operations and coordinated cross-functional teams to ensure smooth workflow and project execution</li>
                                         <li>Served as Program Director and EMCEE for high-profile events, including international awards and company anniversary programs, leading teams to deliver seamless execution</li>
                                         <li>Developed and delivered engaging, consistent brand communication and innovative content across multiple platforms</li>
-                                        <li>Built Responsive Corporate Website</li>
                                         <li>Combined technical expertise, creative vision, and leadership to enhance audience engagement and strengthen organizational presence</li>
+                                        <li>Developed websites for the company and events</li>
                                     </ul>
                                     <div class="experience-gallery mt-4">
                                         <div class="row g-2">
@@ -291,7 +415,7 @@
                                             <h4 class="mb-1">Multimedia and Publicity</h4>
                                             <h5 class="text-primary mb-2">Elite Global Excellence</h5>
                                         </div>
-                                        <span class="badge bg-primary">Nov 2023 - Mar 2024</span>
+                                        <span class="badge bg-primary">Nov 2023 - Mar 2024 (Remote)</span>
                                     </div>
                                     <ul class="experience-list">
                                         <li>Designed visually engaging posters and multimedia content to support research projects, events, and campaigns</li>
@@ -392,7 +516,56 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="text-muted small mb-0 mt-3"><i class="bi bi-building"></i> Worldwide International Event (organized by Persada Johor)</p>
+                                    <p class="text-muted small mb-0 mt-3"><i class="bi bi-building"></i> Worldwide International Event (organized by Persada)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /// Founder (Embrois) - Entrepreneur /// -->
+                        <div class="timeline-item animate-slide-in">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="experience-card">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div>
+                                            <h4 class="mb-1">Founder (Embrois) - Entrepreneur</h4>
+                                            <h5 class="text-primary mb-2">Online-based Skincare Business</h5>
+                                        </div>
+                                        <span class="badge bg-primary">Feb 2022 - Sep 2023</span>
+                                    </div>
+                                    <ul class="experience-list">
+                                        <li>Imported authentic skincare products from Korea</li>
+                                        <li>Business strategy planning and sales management</li>
+                                        <li>Content Creation, Creative design, and social media management</li>
+                                    </ul>
+                                    <div class="experience-gallery mt-4">
+                                        <div class="row g-2">
+                                            <div class="col-6 col-md-3">
+                                                <div class="experience-gallery-item" data-experience="embrois">
+                                                    <img src="assets/img/embrois/Embrois_cover_photo.jpeg" alt="Embrois Cover" loading="lazy">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="experience-gallery-item" data-experience="embrois">
+                                                    <img src="assets/img/embrois/Embrois_Posts.jpeg" alt="Embrois Posts" loading="lazy">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="experience-gallery-item" data-experience="embrois">
+                                                    <img src="assets/img/embrois/Embrois_Product_promotion (2).jpeg" alt="Embrois Promotion" loading="lazy">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                <div class="experience-gallery-item experience-gallery-more" data-experience="embrois">
+                                                    <img src="assets/img/embrois/Aveeno.jpeg" alt="Embrois Products" loading="lazy">
+                                                    <div class="gallery-more-overlay">
+                                                        <span>+16 more</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted small mb-0 mt-3"><i class="bi bi-shop"></i> E-commerce & Brand Management</p>
                                 </div>
                             </div>
                         </div>
@@ -403,11 +576,15 @@
         </div>
     </section>
 
-    <section id="skills" class="section-padding bg-light">
+    <section id="skills" class="section-padding bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Skills & Expertise</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 04. MULTI-DISCIPLINARY</span>
+                        <h2 class="section-title">Skills & Expertise</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row g-4">
@@ -419,10 +596,10 @@
                         </div>
                         <h4>Digital Marketing</h4>
                         <div class="skill-items">
-                            <span class="skill-badge">Social Media Marketing</span>
+                            <span class="skill-badge">Digital Marketing</span>
+                            <span class="skill-badge">Social Media Management</span>
                             <span class="skill-badge">Content Strategy</span>
-                            <span class="skill-badge">SEO/SEM</span>
-                            <span class="skill-badge">Email Marketing</span>
+                            <span class="skill-badge">Brand Communication</span>
                             <span class="skill-badge">Analytics & Reporting</span>
                         </div>
                     </div>
@@ -433,13 +610,13 @@
                         <div class="skill-icon">
                             <i class="bi bi-pencil-square"></i>
                         </div>
-                        <h4>Content Creation</h4>
+                        <h4>Content Creation & Writing</h4>
                         <div class="skill-items">
+                            <span class="skill-badge">Content Creation & Writing</span>
                             <span class="skill-badge">Copywriting</span>
+                            <span class="skill-badge">Brand Storytelling</span>
                             <span class="skill-badge">Video Production</span>
-                            <span class="skill-badge">Photography</span>
                             <span class="skill-badge">Content Planning</span>
-                            <span class="skill-badge">Storytelling</span>
                         </div>
                     </div>
                 </div>
@@ -451,9 +628,9 @@
                         </div>
                         <h4>Creative Design</h4>
                         <div class="skill-items">
+                            <span class="skill-badge">Creative Design</span>
                             <span class="skill-badge">Adobe Photoshop</span>
                             <span class="skill-badge">Adobe Illustrator</span>
-                            <span class="skill-badge">Adobe Premiere Pro</span>
                             <span class="skill-badge">Canva</span>
                             <span class="skill-badge">Brand Identity</span>
                         </div>
@@ -467,37 +644,84 @@
                         </div>
                         <h4>Web Development</h4>
                         <div class="skill-items">
+                            <span class="skill-badge">Web Development</span>
                             <span class="skill-badge">HTML/CSS</span>
                             <span class="skill-badge">JavaScript</span>
-                            <span class="skill-badge">Node.js</span>
                             <span class="skill-badge">Bootstrap</span>
+                            <span class="skill-badge">Node.js</span>
                             <span class="skill-badge">WordPress</span>
                             <span class="skill-badge">Responsive Design</span>
-                            <span class="skill-badge">UI/UX Basics</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- /// AI & Database Skills /// -->
                 <div class="col-lg-4 col-md-6">
                     <div class="skill-category">
                         <div class="skill-icon">
-                            <i class="bi bi-robot"></i>
+                            <i class="bi bi-gear-wide-connected"></i>
                         </div>
-                        <h4>AI & Database</h4>
+                        <h4>Operations & Administration</h4>
                         <div class="skill-items">
-                            <span class="skill-badge">MySQL</span>
-                            <span class="skill-badge">MongoDB</span>
-                            <span class="skill-badge">ML Models</span>
-                            <span class="skill-badge">AI Chatbot Development</span>
-                            <span class="skill-badge">ChatGPT</span>
-                            <span class="skill-badge">Gemini</span>
-                            <span class="skill-badge">DeepSeek</span>
+                            <span class="skill-badge">Operations Management</span>
+                            <span class="skill-badge">Administration & Data Entry</span>
+                            <span class="skill-badge">Strategic Planning</span>
+                            <span class="skill-badge">Cross-Functional Coordination</span>
+                            <span class="skill-badge">Project Execution</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- /// Design Tools /// -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <div class="skill-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <h4>Leadership & Collaboration</h4>
+                        <div class="skill-items">
+                            <span class="skill-badge">Leadership Proficiency</span>
+                            <span class="skill-badge">Team Collaboration</span>
+                            <span class="skill-badge">Team Coordination</span>
+                            <span class="skill-badge">Problem Solving</span>
+                            <span class="skill-badge">Stakeholder Relations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <div class="skill-icon">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <h4>Event Management</h4>
+                        <div class="skill-items">
+                            <span class="skill-badge">Event Management</span>
+                            <span class="skill-badge">Program Director</span>
+                            <span class="skill-badge">EMCEE</span>
+                            <span class="skill-badge">Protocol Services</span>
+                            <span class="skill-badge">Logistics Management</span>
+                            <span class="skill-badge">VIP & Delegate Handling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /// Technical & AI Skills /// -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="skill-category">
+                        <div class="skill-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h4>Technical & AI Proficiency</h4>
+                        <div class="skill-items">
+                            <span class="skill-badge">Technical Proficiency</span>
+                            <span class="skill-badge">AI Chatbot Development</span>
+                            <span class="skill-badge">ML Models</span>
+                            <span class="skill-badge">MySQL</span>
+                            <span class="skill-badge">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /// Design & Dev Tools /// -->
                 <div class="col-lg-4 col-md-6">
                     <div class="skill-category">
                         <div class="skill-icon">
@@ -509,43 +733,7 @@
                             <span class="skill-badge">Visual Studio</span>
                             <span class="skill-badge">Jira</span>
                             <span class="skill-badge">Clockify</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- /// Event Leadership /// -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="skill-category">
-                        <div class="skill-icon">
-                            <i class="bi bi-calendar-event"></i>
-                        </div>
-                        <h4>Event Leadership</h4>
-                        <div class="skill-items">
-                            <span class="skill-badge">Event Planning</span>
-                            <span class="skill-badge">Program Director</span>
-                            <span class="skill-badge">EMCEE</span>
-                            <span class="skill-badge">Logistics Management</span>
-                            <span class="skill-badge">Vendor Coordination</span>
-                            <span class="skill-badge">Protocol Services</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- /// Leadership & Management /// -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="skill-category">
-                        <div class="skill-icon">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <h4>Leadership & Management</h4>
-                        <div class="skill-items">
-                            <span class="skill-badge">Team Leadership</span>
-                            <span class="skill-badge">Project Management</span>
-                            <span class="skill-badge">Strategic Planning</span>
-                            <span class="skill-badge">Operations Management</span>
-                            <span class="skill-badge">Stakeholder Relations</span>
-                            <span class="skill-badge">Problem Solving</span>
-                            <span class="skill-badge">Communication</span>
+                            <span class="skill-badge">ChatGPT & Gemini</span>
                         </div>
                     </div>
                 </div>
@@ -615,8 +803,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-4">Projects</h2>
-                    <p class="text-center text-muted mb-5">Featured software engineering projects</p>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 05. FEATURED WORK</span>
+                        <h2 class="section-title">Flagship AI & Software Projects</h2>
+                        <div class="section-bar"></div>
+                        <p class="text-muted mt-2">End-to-end intelligent engineering with full-stack implementation</p>
+                    </div>
                 </div>
             </div>
             
@@ -692,15 +884,33 @@
         </div>
     </section>
 
-    <section id="education" class="section-padding bg-light">
+    <section id="education" class="section-padding bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Education</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 06. ACADEMIC FOUNDATION</span>
+                        <h2 class="section-title">Education & Qualifications</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
+                    <!-- /// Master's Degree /// -->
+                    <div class="education-card mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="education-icon">
+                                <i class="bi bi-mortarboard-fill"></i>
+                            </div>
+                            <div class="education-content">
+                                <h4>Master of Science in Informatics</h4>
+                                <h5 class="text-primary"><a href="https://www.utm.my/" target="_blank" style="color: inherit; text-decoration: none;">Universiti Teknologi Malaysia (UTM)</a></h5>
+                                <p class="text-muted mb-2">2026 - Present | <span class="badge bg-primary">In Progress</span></p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- /// Bachelor's Degree /// -->
                     <div class="education-card mb-4">
                         <div class="d-flex align-items-start">
@@ -738,7 +948,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Extra-Curricular & Volunteering</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 07. LEADERSHIP & SERVICE</span>
+                        <h2 class="section-title">Extra-Curricular & Volunteering</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row g-4">
@@ -748,8 +962,8 @@
                         <div class="activity-icon">
                             <i class="bi bi-camera2"></i>
                         </div>
-                        <h4>UNESCO Club Multimedia Team</h4>
-                        <p class="text-primary mb-3">UTM | 2021 - 2022</p>
+                        <h4>Multimedia Executive</h4>
+                        <p class="text-primary mb-3">UNESCO club - UTM | 2021- 2022</p>
                         <p>Developed and managed multimedia content, creative poster design, including graphics and videos, to support university club events and promotions, ensuring engaging and cohesive visual communication.</p>
                         <div class="activity-highlights">
                             <span class="highlight-badge">Multimedia Content</span>
@@ -766,8 +980,8 @@
                         <div class="activity-icon">
                             <i class="bi bi-images"></i>
                         </div>
-                        <h4>COMFAIR Multimedia Crew</h4>
-                        <p class="text-primary mb-3">COMFAIR 2023 - UTM | 1-Day Event</p>
+                        <h4>Multimedia Crew</h4>
+                        <p class="text-primary mb-3">COMFAIR 2023 - UTM (Event)</p>
                         <p>Worked in the multimedia team, creating and managing visual content, poster design to support event activities, documentation, and promotion.</p>
                         <div class="activity-highlights">
                             <span class="highlight-badge">Visual Content</span>
@@ -782,8 +996,8 @@
                         <div class="activity-icon">
                             <i class="bi bi-person-badge"></i>
                         </div>
-                        <h4>Student Registration Assistant</h4>
-                        <p class="text-primary mb-3">International Student Orientation Program (ISOP) 2023 - UTM International | October 2023</p>
+                        <h4>Student Registration Assistant (Volunteer)</h4>
+                        <p class="text-primary mb-3">International Student Orientation Program (ISOP) 2023 | UTM International | October 2023</p>
                         <p>Assisted with student registration and onboarding. Provided guidance and information to new international students.</p>
                         <div class="activity-highlights">
                             <span class="highlight-badge">Volunteer</span>
@@ -798,11 +1012,15 @@
         </div>
     </section>
 
-    <section id="languages" class="section-padding bg-light">
+    <section id="languages" class="section-padding bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Languages</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 08. COMMUNICATION</span>
+                        <h2 class="section-title">Multilingual Proficiency</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -829,10 +1047,38 @@
                                 <span class="language-flag">🇧🇩</span>
                                 <span class="language-name">Bengali</span>
                             </div>
-                            <span class="language-level">Fluent</span>
+                            <span class="language-level">Native</span>
                         </div>
                         <div class="progress">
                             <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <!-- /// Malay /// -->
+                    <div class="language-item">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                                <span class="language-flag">🇲🇾</span>
+                                <span class="language-name">Malay</span>
+                            </div>
+                            <span class="language-level">Basic</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 45%"></div>
+                        </div>
+                    </div>
+
+                    <!-- /// Mandarin /// -->
+                    <div class="language-item">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                                <span class="language-flag">🇨🇳</span>
+                                <span class="language-name">Mandarin</span>
+                            </div>
+                            <span class="language-level">Basic</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 35%"></div>
                         </div>
                     </div>
 
@@ -843,7 +1089,7 @@
                                 <span class="language-flag">🇵🇰</span>
                                 <span class="language-name">Urdu</span>
                             </div>
-                            <span class="language-level">Intermediate</span>
+                            <span class="language-level">Conversational</span>
                         </div>
                         <div class="progress">
                             <div class="progress-bar" style="width: 70%"></div>
@@ -857,7 +1103,7 @@
                                 <span class="language-flag">🇮🇳</span>
                                 <span class="language-name">Hindi</span>
                             </div>
-                            <span class="language-level">Intermediate</span>
+                            <span class="language-level">Conversational</span>
                         </div>
                         <div class="progress">
                             <div class="progress-bar" style="width: 70%"></div>
@@ -874,7 +1120,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Hobbies & Interests</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 09. BEYOND WORK</span>
+                        <h2 class="section-title">Hobbies & Creative Pursuits</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center g-4">
@@ -938,12 +1188,16 @@
     </section>
 
     <!-- /// Certificates Section /// -->
-    <section id="certificates" class="section-padding bg-light">
+    <section id="certificates" class="section-padding bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Certificates & Achievements</h2>
-                    <p class="text-center text-muted mb-5">Professional certifications and recognition</p>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 10. RECOGNITION</span>
+                        <h2 class="section-title">Certificates & Achievements</h2>
+                        <div class="section-bar"></div>
+                        <p class="text-muted mt-2">Professional certifications, leadership awards, and credential milestones</p>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -962,8 +1216,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">My Gallery</h2>
-                    <p class="text-center text-muted mb-4">A visual showcase of my work and experiences</p>
+                    <div class="section-header text-center mb-4">
+                        <span class="section-tag-pill">// 11. VISUAL ARCHIVE</span>
+                        <h2 class="section-title">My Portfolio Gallery</h2>
+                        <div class="section-bar"></div>
+                        <p class="text-muted mt-2">A curated visual showcase of events, design, projects, and experiences</p>
+                    </div>
                 </div>
             </div>
             
@@ -1690,26 +1948,19 @@
             </div>
         </div>
         
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="lightbox">
-            <span class="lightbox-close">&times;</span>
-            <img class="lightbox-content" id="lightbox-img">
-            <video class="lightbox-content" id="lightbox-video" controls style="display: none;">
-                <source id="lightbox-video-source" type="video/mp4">
-            </video>
-            <div id="lightbox-caption"></div>
-            <button class="lightbox-nav lightbox-prev"><i class="bi bi-chevron-left"></i></button>
-            <button class="lightbox-nav lightbox-next"><i class="bi bi-chevron-right"></i></button>
-        </div>
     </section>
 
     <!-- /// Testimonials Section /// -->
-    <section id="testimonials" class="section-padding bg-light">
+    <section id="testimonials" class="section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Testimonials</h2>
-                    <p class="text-center text-muted mb-5">What people say about working with me</p>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 12. TESTIMONIALS</span>
+                        <h2 class="section-title">Endorsements & Recommendations</h2>
+                        <div class="section-bar"></div>
+                        <p class="text-muted mt-2">What supervisors, colleagues, and collaborators say about working with me</p>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -1723,11 +1974,15 @@
         </div>
     </section>
 
-    <section id="contact" class="section-padding">
+    <section id="contact" class="section-padding bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="section-title text-center mb-5">Get In Touch</h2>
+                    <div class="section-header text-center mb-5">
+                        <span class="section-tag-pill">// 13. CONNECT</span>
+                        <h2 class="section-title">Get In Touch</h2>
+                        <div class="section-bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -1751,7 +2006,7 @@
                         </div>
                         
                         <p class="text-muted">
-                            <i class="bi bi-geo-alt-fill text-primary"></i> Johor Bahru, Malaysia
+                            <i class="bi bi-geo-alt-fill text-primary"></i> Kuala Lumpur, Malaysia
                         </p>
                     </div>
                 </div>
@@ -1761,11 +2016,24 @@
 
     <footer class="footer bg-dark text-white py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                            <a href="https://github.com/Tanshiba12/" target="_blank" class="social-link" aria-label="GitHub">
-                                <i class="bi bi-github"></i>
-                            </a>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; <span id="currentYear"></span> Tanshiba Naorin Prapti. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://www.linkedin.com/in/tanshiba-naorin-ba6b21236/" target="_blank" class="social-link me-2" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Tanshiba12/" target="_blank" class="social-link me-2" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="mailto:t.naorin.p012@gmail.com" class="social-link me-2" aria-label="Email">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                    <a href="https://wa.me/601163644131" target="_blank" class="social-link" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -1825,6 +2093,20 @@
             <span class="nav-label">Contact</span>
         </div>
     </nav>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Media Preview">
+        <span class="lightbox-close" aria-label="Close">&times;</span>
+        <div class="lightbox-nav lightbox-prev" aria-label="Previous media">&#10094;</div>
+        <div class="lightbox-nav lightbox-next" aria-label="Next media">&#10095;</div>
+        <div class="lightbox-container">
+            <img id="lightbox-img" class="lightbox-content" src="" alt="Enlarged preview">
+            <video id="lightbox-video" class="lightbox-content" controls style="display:none;">
+                <source id="lightbox-video-source" src="" type="video/mp4">
+            </video>
+        </div>
+        <div id="lightbox-caption"></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
